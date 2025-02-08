@@ -85,11 +85,7 @@ echo
 echo "Installing SwiftlyGo ..."
 #
 # check if user is root and set SUDO accordingly
-if [ "$EUID" -ne 0 ]; then
-   SUDO="sudo"
-else
-   SUDO=""
-fi
+SUDO=$(if [ "$(id -u)" -ne 0 ]; then echo sudo; else echo ""; fi)
 #
 DOWNLOAD_URL="https://github.com/cyberxdruid211/swiftlygo/releases/download/$swgo_ver/swiftlygo-$arch_type"
 DEST_DIR="/usr/libexec/swiftlygo/bin/"

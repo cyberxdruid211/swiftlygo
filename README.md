@@ -1,2 +1,2 @@
-# swiftlygo
-A Toolchain Installer for the Swift Programming Language.
+# swiftlygo.xyz
+The swiftlygo website

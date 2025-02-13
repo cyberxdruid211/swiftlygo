@@ -1,3 +1,5 @@
+[![Build SwiftlyGo](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/build-swiftlygo.yaml/badge.svg)](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/build-swiftlygo.yaml)
+
 # SwiftlyGo
 
 An Installer and Toolchain Manager for the **Swift** Programming Language on Linux

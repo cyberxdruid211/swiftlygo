@@ -18,6 +18,7 @@ jobs:
 
       - name: Build SwiftlyGo
         run: |
+          cd source
           go build -o swiftlygo
           bash ./create-env.sh
 

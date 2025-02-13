@@ -58,6 +58,6 @@ func Execute() {
 
 func init() {
 	rootCmd.PersistentFlags().BoolVarP(&yesFlag, "yes", "y", false, "Automatically answer 'yes' to all prompts")
-	env_file := envBase+"swiftlygo.env"
+	env_file := "./swiftlygo.env"
 	godotenv.Load(env_file)
 }

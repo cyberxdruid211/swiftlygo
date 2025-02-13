@@ -11,12 +11,8 @@ import (
 )
 
 const (
-    //installBase = "usr/libexec/swift" // For local testing
-    installBase = "/usr/libexec/swift" // Uncomment for deployment
-	//linkBase = "usr/bin/" // For local testing
-    linkBase = "/usr/bin/" // Uncomment for deployment
-    //envBase = "" // For local testing
-    envBase = "/usr/libexec/swiftlygo/bin/" // Uncomment for deployment
+    installBase = "/usr/libexec/swift"
+    linkBase = "/usr/bin/"
 )
 
 func generateDownloadURL(swiftVer string) string {

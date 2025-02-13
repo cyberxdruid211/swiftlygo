@@ -206,6 +206,11 @@ sudo chmod +x /usr/libexec/swiftlygo/bin/swiftlygo
 # move .env
 sudo mv swiftlygo.env /usr/libexec/swiftlygo/bin/swiftlygo.env
 ```
+Add symlink for `swiftlygo`
+```bash
+# create symlink
+sudo ln -sf /usr/libexec/swiftlygo/bin/swiftlygo /usr/bin/swiftlygo
+```
 
 SwiftlyGo is now installed and ready to use.  
 You can remove the `swiftlygo-setup` directory as it is no longer needed.

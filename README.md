@@ -121,3 +121,9 @@ sudo swiftlygo removeSwiftlygo
 * [swiftlygo activate](docs/swiftlygo_activate.md)
 * [swiftlygo delete](docs/swiftlygo_delete.md)
 * [swiftlygo removeSwiftlygo](docs/swiftlygo_remove.md)
+
+## Development
+* To build and install your own version of SwiftlyGo see the [Development Guide](docs/development.md)
+
+## Design
+* For information about the design of SwiftlyGo see the [Design Document](docs/design.md)

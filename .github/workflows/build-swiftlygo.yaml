@@ -24,5 +24,6 @@ jobs:
 
       - name: Verify build
         run: |
+          cd source
           ./swiftlygo -h
           sudo ./swiftlygo list

@@ -1,4 +1,4 @@
-## SwiftlyGo Development
+## SwiftlyGo Development Guide
 
 ### Build Host Requirements
 The only requirement for the build host is that it can run Go version 1.20.0 or later.

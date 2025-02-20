@@ -33,7 +33,7 @@ var dependencies = []string{
 // global vars
 var (
     adminMessage    = "Please run swiftlygo with admin privileges. (sudo)"
-    relVer = "v1.0"
+    relVer = "v1.0.1"
 )
 var logo = fmt.Sprintf(`
  ____          _  __ _   _        ____       

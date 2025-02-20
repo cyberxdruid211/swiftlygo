@@ -70,6 +70,11 @@ if test -r /etc/os-release; then
                 os_dir="debian12"
                 os_file_name="debian12"
                 ;;
+                *)
+                echo
+                echo "Sorry you have an unsupported OS version"
+                exit 1
+                ;;
         esac
 else
     echo

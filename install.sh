@@ -10,7 +10,7 @@ id=""
 dist_ver=""
 os_dir=""
 os_file_name=""
-swgo_ver="v1.0"
+swgo_ver="v1.0.1"
 
 case $arch in
     *x86_64*)

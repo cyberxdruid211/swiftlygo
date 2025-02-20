@@ -18,7 +18,7 @@ package cmd
 import (
 	"fmt"
 	"os"
-
+	"path/filepath"
 	"github.com/joho/godotenv"
 	"github.com/spf13/cobra"
 )
@@ -58,6 +58,16 @@ func Execute() {
 
 func init() {
 	rootCmd.PersistentFlags().BoolVarP(&yesFlag, "yes", "y", false, "Automatically answer 'yes' to all prompts")
-	env_file := "./swiftlygo.env"
-	godotenv.Load(env_file)
+	// Get the directory of the executable
+    exePath, err := os.Executable()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error: could not determine executable path: %v\n", err)
+        os.Exit(1) // Exit if we can't determine the path
+    }
+    
+    // Construct the path to swiftlygo.env relative to the executable
+    envFile := filepath.Join(filepath.Dir(exePath), "swiftlygo.env")
+    if err := godotenv.Load(envFile); err != nil {
+        fmt.Fprintf(os.Stderr, "Warning: could not load %s: %v\n", envFile, err)
+    }
 }

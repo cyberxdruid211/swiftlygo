@@ -45,6 +45,11 @@ var logo = fmt.Sprintf(`
 `, relVer)
 
 func InstallDependencies() error {
+    if os.Getenv("DIST_VER") == "Ubuntu 24.04" {
+        // When installing on ubuntu plucky libpython3.13-dev is installed by default.
+        // We need explicitly add libpython3.12-dev as a dependency.
+        dependencies = append(dependencies, "libpython3.12-dev")
+    }
     depsString := strings.Join(dependencies, " ")
     fmt.Printf("Installing dependencies: %s\n", depsString)
     execCmd := exec.Command("sh", "-c", "apt-get install -y "+depsString)

@@ -1,4 +1,4 @@
-name: Test Build SwiftlyGo
+name: Build SwiftlyGo
 
 on:
   workflow_dispatch:

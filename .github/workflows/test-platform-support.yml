@@ -1,0 +1,65 @@
+name: Test SwiftlyGo Platform Support
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    container:
+      image: golang:1.24.0-alpine
+    steps:
+      - name: Install git
+        run: apk add --no-cache git
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Build SwiftlyGo
+        run: |
+          cd source
+          GOOS=linux GOARCH=amd64 go build -buildvcs=false -ldflags="-s -w" -o swiftlygo
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: swiftlygo-binary
+          path: |
+            source/swiftlygo
+            source/create-env.sh
+          retention-days: 1
+
+  test:
+    needs: build
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        distro: ["debian:12", "ubuntu:20.04", "ubuntu:22.04", "ubuntu:24.04"]
+    container: ${{ matrix.distro }}
+    steps:
+      - name: Install dependencies 
+        run: |
+          apt-get update
+          apt-get install -y ca-certificates
+          
+      - name: Download binary
+        uses: actions/download-artifact@v4
+        with:
+          name: swiftlygo-binary
+          path: ./binary
+
+      - name: Make binary executable 
+        run: |
+          chmod +x ./binary/swiftlygo
+
+      - name: Create swiftlygo.env file 
+        run: |
+          cd binary
+          sh ./create-env.sh
+          
+
+      - name: Run tests --help
+        run: ./binary/swiftlygo --help
+
+      - name: Run tests list
+        run: ./binary/swiftlygo list
+        

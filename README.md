@@ -1,3 +1,5 @@
+[![SwiftlyGo Platform Support](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-platform-support.yml/badge.svg)](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-platform-support.yml) ![Debian](assets/debian-12.svg) ![Ubuntu](assets/ubuntu-20.04.svg) ![Ubuntu](assets/ubuntu-22.04.svg) ![Ubuntu](assets/ubuntu-24.04.svg)
+
 [![Build SwiftlyGo](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-build-swiftlygo.yaml/badge.svg?branch=main)](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-build-swiftlygo.yaml)
 
 # SwiftlyGo

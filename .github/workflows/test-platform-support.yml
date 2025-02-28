@@ -1,4 +1,4 @@
-name: Test SwiftlyGo Platform Support
+name: SwiftlyGo Platform Support
 
 on:
   workflow_dispatch:

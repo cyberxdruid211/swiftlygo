@@ -1,4 +1,4 @@
-[![Build SwiftlyGo](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/build-swiftlygo.yaml/badge.svg)](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/build-swiftlygo.yaml)
+[![Build SwiftlyGo](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-build-swiftlygo.yaml/badge.svg?branch=main)](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-build-swiftlygo.yaml)
 
 # SwiftlyGo
 

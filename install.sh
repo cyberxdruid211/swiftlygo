@@ -10,7 +10,7 @@ id=""
 dist_ver=""
 os_dir=""
 os_file_name=""
-swgo_ver="v1.0.1"
+swgo_ver="v1.1"
 
 case $arch in
     *x86_64*)
@@ -59,7 +59,7 @@ if test -r /etc/os-release; then
                 os_dir="ubuntu2204"
                 os_file_name="ubuntu22.04"
                 ;;
-                *noble*)
+                *noble* | *oracular* | *plucky*)
                 id="ubuntu"
                 dist_ver="Ubuntu 24.04"
                 os_dir="ubuntu2404"

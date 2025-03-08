@@ -33,7 +33,7 @@ var dependencies = []string{
 // global vars
 var (
     adminMessage    = "Please run swiftlygo with admin privileges. (sudo)"
-    relVer = "v1.0.1"
+    relVer = "v1.1"
 )
 var logo = fmt.Sprintf(`
  ____          _  __ _   _        ____       
@@ -45,6 +45,11 @@ var logo = fmt.Sprintf(`
 `, relVer)
 
 func InstallDependencies() error {
+    if os.Getenv("DIST_VER") == "Ubuntu 24.04" {
+        // When installing dependencies on ubuntu plucky libpython3.13-dev is installed by default.
+        // We need to explicitly add libpython3.12-dev as a dependency.
+        dependencies = append(dependencies, "libpython3.12-dev")
+    }
     depsString := strings.Join(dependencies, " ")
     fmt.Printf("Installing dependencies: %s\n", depsString)
     execCmd := exec.Command("sh", "-c", "apt-get install -y "+depsString)
@@ -101,33 +106,6 @@ func spinner(message string) {
         }
     }
 }
-
-// func updateEnvKeyValue(key string, new_value string) {
-//     content, err := os.ReadFile(envBase+"swiftlygo.env")
-//     if err != nil {
-//         log.Fatal("Error reading .env file:", err)
-//     }
-
-//     envMap, err := godotenv.Unmarshal(string(content))
-//     if err != nil {
-//         log.Fatal("Error unmarshaling .env content:", err)
-//     }
-
-//     envMap[key] = new_value
-
-//     newContent, err := godotenv.Marshal(envMap)
-//     if err != nil {
-//         log.Fatal("Error marshaling updated .env content:", err)
-//     }
-
-//     err = os.WriteFile(envBase+"swiftlygo.env", []byte(newContent), 0644)
-//     if err != nil {
-//         log.Fatal("Error writing to .env file:", err)
-//     }
-
-//     fmt.Println("Update: The latest Swift version is now "+new_value)
-//     fmt.Println()
-// }
 
 func getDirNames(dirPath string) ([]string, error) {
     var dirs []string

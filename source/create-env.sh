@@ -58,7 +58,7 @@ if test -r /etc/os-release; then
                 os_dir="ubuntu2204"
                 os_file_name="ubuntu22.04"
                 ;;
-                *noble*)
+                *noble* | *oracular* | *plucky*)
                 id="ubuntu"
                 dist_ver="Ubuntu 24.04"
                 os_dir="ubuntu2404"

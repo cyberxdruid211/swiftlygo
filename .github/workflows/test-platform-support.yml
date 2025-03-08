@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        distro: ["debian:12", "ubuntu:20.04", "ubuntu:22.04", "ubuntu:24.04, ubuntu:24.10, ubuntu:25.04"]
+        distro: ["debian:12", "ubuntu:20.04", "ubuntu:22.04", "ubuntu:24.04", "ubuntu:24.10", "ubuntu:25.04"]
     container: ${{ matrix.distro }}
     steps:
       - name: Install dependencies 

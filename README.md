@@ -1,4 +1,4 @@
-[![SwiftlyGo Platform Support](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-platform-support.yml/badge.svg)](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-platform-support.yml) ![Debian](assets/debian-12.svg) ![Ubuntu](assets/ubuntu-20.04.svg) ![Ubuntu](assets/ubuntu-22.04.svg) ![Ubuntu](assets/ubuntu-24.04.svg)
+[![SwiftlyGo Platform Support](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-platform-support.yml/badge.svg)](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-platform-support.yml) ![Debian](assets/debian-12.svg) ![Ubuntu](assets/ubuntu-20.04.svg) ![Ubuntu](assets/ubuntu-22.04.svg) ![Ubuntu](assets/ubuntu-24.04.svg) ![Ubuntu](assets/ubuntu-24.10.svg) ![Ubuntu](assets/ubuntu-25.04.svg)
 
 [![Build SwiftlyGo](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-build-swiftlygo.yaml/badge.svg?branch=main)](https://github.com/cyberxdruid211/swiftlygo/actions/workflows/test-build-swiftlygo.yaml)
 
@@ -37,7 +37,7 @@ Congratulations! Swiftlygo has been successfully installed.
 \___ \ \ /\ / / | |_| __| | | | | |  _ / _ \ 
  ___) \ V  V /| |  _| |_| | |_| | |_| | (_) |
 |____/ \_/\_/ |_|_|  \__|_|\__, |\____|\___/ 
-                           |___/  v1.0           
+                           |___/  v1.1           
 
 For help run 'swiftlygo -h'
 ```
@@ -50,7 +50,7 @@ swiftlygo -h
 \___ \ \ /\ / / | |_| __| | | | | |  _ / _ \ 
  ___) \ V  V /| |  _| |_| | |_| | |_| | (_) |
 |____/ \_/\_/ |_|_|  \__|_|\__, |\____|\___/ 
-                           |___/  v1.0      
+                           |___/  v1.1      
 
 An Installer for the Swift Programming Language.
 
